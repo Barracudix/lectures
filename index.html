@@ -49,7 +49,7 @@
                     <img width="200" src="images/van.tanev.jpg" />
                     <img width="200" src="images/nanaya.satsujinki.png" />
                     <p><a href="mailto:van.tanev@gmail.com">van.tanev@gmail.com</a></p>
-                    <p><a href="http://github.com/CraftyShadow">github.com/CraftyShadow</a></p>
+                    <p><a href="http://github.com/CraftyShadow" target="_blank">github.com/CraftyShadow</a></p>
                 </section>
                 <section>
                     <p>С какво се занимавам?</p>
@@ -136,17 +136,17 @@
                 </section>
                 <section>
                     <h3>Защо <strong>Git</strong>?</h3>
-                    <p><a href="http://git-scm.com/about/">Ето защо <strong>Git</strong></a></p>
+                    <p><a href="http://git-scm.com/about/" target="_blank">Ето защо <strong>Git</strong></a></p>
                     <ul>
                         <li class="fragment">Гъвкав
                         <li class="fragment">Бърз
                         <li class="fragment">Дистрибутиран
                         <li class="fragment">Сигурен
-                        <li class="fragment"><a href="http://github.com">Github</a> и работа в екип
+                        <li class="fragment"><a href="http://github.com" target="_blank">Github</a> и работа в екип
                         <li class="fragment">Догодина ще стане най-използваната система
                             <sup><small>
-                                [<a href="http://ianskerrett.wordpress.com/2013/06/12/eclipse-community-survey-results-for-2013/">1</a>]
-                                [<a href="https://www.ohloh.net/repositories/compare">2</a>]
+                                [<a href="http://ianskerrett.wordpress.com/2013/06/12/eclipse-community-survey-results-for-2013/" target="_blank">1</a>]
+                                [<a href="https://www.ohloh.net/repositories/compare" target="_blank">2</a>]
                             </small></sup>
                     </ul>
                 </section>
@@ -159,11 +159,12 @@
                 </section>
                 <section>
                     <ol>
-                        <li><a href="http://git-scm.com/book">Pro Git book</a>
-                        <li><a href="http://gitimmersion.com/">Git Immersion</a>
-                        <li><a href="http://gitref.org/">Git Reference</a>
-                        <li><a href="https://na1.salesforce.com/help/pdfs/en/salesforce_git_developer_cheatsheet.pdf">Git Cheat Sheet</a>
-                        <li><a href="http://lmgtfy.com/?q=Git">Google ;)</a>
+                        <li><a href="http://git-scm.com/book" target="_blank">Pro Git book</a>
+                        <li><a href="http://gitimmersion.com/" target="_blank">Git Immersion</a>
+                        <li><a href="http://gitref.org/" target="_blank">Git Reference</a>
+                        <li><a href="https://na1.salesforce.com/help/pdfs/en/salesforce_git_developer_cheatsheet.pdf" target="_blank">Git Cheat Sheet</a>
+                        <li><a href="http://lmgtfy.com/?q=Git" target="_blank">Google ;)</a>
+                        <li class="fragment">Като последна опция,<br /> ръчкайте Ванката, Тео или Краси
                     </ol>
                 </section>
                 <section>
@@ -171,24 +172,61 @@
                 </section>
                 <section>
                     <ol>
-                        <li><a href="http://git-scm.com/downloads">Download Git</a>
-                        <li><a href="https://github.com/FrontendCrashCourse-Varnalab/simple-dotfiles">Бърза настройка за win</a>
+                        <li><a href="http://git-scm.com/downloads" target="_blank">Download Git</a>
+                        <li><a href="https://github.com/FrontendCrashCourse-Varnalab/simple-dotfiles" target="_blank">Бърза настройка за win</a>
                     </ol>
                 </section>
                 <section>
-                    <h2>2. My First Git Repo</h2>
-                </section>
-                <section>
-                    <pre><code>
-                       $ mkdir awesome_project
-                       $ cd awesome_project
-                       $ git init
+                    <h2>2. My first Git repository</h2>
+                    <pre><code data-trim>
+$ mkdir awesome_project
+$ cd awesome_project
+$ git init
+Initialized empty Git repository in w:/dev/awesome_project/.git/
                     </code></pre>
                 </section>
                 <section>
-                    <h5>Конзола?</h5>
+                    <h5>Команден ред?</h5>
                     <img width="550" src="images/god_no_please_no.gif" />
                 </section>
+                <section>
+                    <h5>Да!</h5>
+                    <img width="550" src="images/ninja_programmer.gif" />
+                </section>
+                <section>
+                    <h2>3. My first commit</h2>
+                    <pre><code data-trim>
+$ touch README
+$ notepad README
+$ git add README
+$ git commit -m "My first commit"
+[master (root-commit) 365d457] My first commit
+ 1 file changed, 2 insertions(+)
+ create mode 100644 README
+                    </code></pre>
+                </section>
+                <section data-background="images/success_baby.jpg">
+
+                </section>
+                <section>
+                    <h3>А сега какво?</h3>
+                </section>
+                <section>
+                    <img src="images/more_code.gif" />
+                    <h4>Сега пишем още!</h4>
+                </section>
+                <section>
+                    <img src="images/bouncy_pp.gif" />
+                    <h2>Live coding session</h4>
+                </section>
+                <section>
+                    <h2>...</h4>
+                </section>
+                <section>
+                    <h2>Благодаря!</h4>
+                    <img src="images/twi_clap.gif" />
+                </section>
+                <!--
                 <section>
                     <p>From the <a href="https://raw.github.com/git/git/master/Documentation/RelNotes/1.8.4.txt">Git 1.8.4 release notes</a>:</p>
                     <blockquote cite="https://raw.github.com/git/git/master/Documentation/RelNotes/1.8.4.txt">
@@ -197,6 +235,7 @@
                         and record the removal.
                     </blockquote>
                 </section>
+                -->
 			</div>
 		</div>
 

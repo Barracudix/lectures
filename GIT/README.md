@@ -5,6 +5,8 @@
 
 Автор: Иван Танев
 
+Аудиозапис: [тук](http://www.mediafire.com/download/4xlrdxi42sm9hse/Git_lecture%5B2013-09-22%5D.mp3) - само първите 20 мин.
+
 # Ползени линкове #
 
 * <http://git-scm.com/> - Инсталация и документация за Git

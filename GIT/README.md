@@ -15,4 +15,3 @@
 * <http://gitimmersion.com/> - Стъпка по стъпка въведение в Git за команден ред
 * <http://nvie.com/posts/a-successful-git-branching-model/>
 * [What is a branch](http://git-scm.com/book/ch3-1.html) 
-* 

@@ -1,7 +1,7 @@
 Front-end crash course | Fall 2013 | Varna Lab
 ==============================================
 
-# Лекции #
+# Лекции: #
 
 ## [Git и системи за контрол на кода](https://github.com/FrontendCrashCourse-Varnalab/lectures/tree/master/GIT) ##
 Изнесена на 2013-09-22.

@@ -9,3 +9,10 @@ Front-end crash course | Fall 2013 | Varna Lab
  - Лектор: [Иван Танев](https://github.com/VanTanev)
  - Видео: НЕ
  - Аудио: [ДА](http://www.mediafire.com/download/4xlrdxi42sm9hse/Git_lecture%5B2013-09-22%5D.mp3)
+
+ ## [CSS Animations and Architecture](https://github.com/FrontendCrashCourse-Varnalab/lectures/tree/master/CSSAnimationsArchitecture) ##
+Изнесена на 2013-10-22.
+
+ - Лектор: [Красимир Цонев](http://krasimirtsonev.com/main/)
+ - Видео: ...
+ - Аудио: ...

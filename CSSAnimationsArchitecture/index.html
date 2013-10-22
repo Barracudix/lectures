@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Front-end</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/varnalab.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				
+				<section>
+					<h2>Front-end course</h2>
+				</section>
+
+				<section>
+					<section>
+						<h2>CSS animations and transitions</h2>
+					</section>
+					<section>
+						<img src="pics/animations_basics.jpg" />
+					</section>
+					<section>
+						<h3>(1) Transitions, (2) Animations</h3>
+					</section>
+					<section>
+						<h3>(1) Transitions</h3>
+						<ul>
+							<li><span style="color: #999;">transition (property duration timing-function delay)</span></li>
+							<li>transition-property</li>
+							<li>transition-duration</li>
+							<li>transition-timing-function</li>
+							<li>transition-delay</li>
+						</ul>
+						<br /><br />
+						<small style="color: #818181;">* http://cubic-bezier.com/#.17,.67,.83,.67</small>
+					</section>
+					<section>
+<pre><code>transition-duration: 500ms;
+</code></pre>
+						<a href="http://jsfiddle.net/MbtVd/1/">demo</a>
+					</section>
+					<section>
+						<h3>(1) Animations</h3>
+						<ul>
+							<li>@keyframes</li>
+							<li><span style="color: #999;">animation <small>(animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count, and animation-direction.)</small></span></li>
+							<li>animation-name</li>
+							<li>animation-duration</li>
+							<li>animation-timing-function</li>
+							<li>animation-delay</li>
+							<li>animation-iteration-count</li>
+							<li>animation-direction</li>
+							<li>animation-play-state</li>
+							<li>animation-fill-mode <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode#Browser_compatibility">(+)</a></li>
+						</ul>
+					</section>
+					<section>
+<pre><code>animation-name
+animation-duration
+</code></pre>
+						<a href="http://jsfiddle.net/aZw7c/2/">demo</a>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Clean and optimized CSS code, Architecture</h2>						
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>Materials:</h3>
+						<a href="http://www.w3schools.com/css/css3_transitions.asp">CSS3 Transitions</a><br />
+						<a href="http://www.w3schools.com/css/css3_animations.asp">CSS3 Animations</a><br />
+					</section>
+				</section>			
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

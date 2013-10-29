@@ -101,6 +101,21 @@
 						<pre><code>#header { color: #6c94be; }</code></pre>
 					</section>
 					<section>
+						<h2>Nested rules</h2>
+<pre><code>#header {
+  color: black;
+  .navigation {
+    font-size: 12px;
+  }
+}</code></pre>
+<pre><code>#header {
+  color: black;
+}
+#header .navigation {
+  font-size: 12px;
+}</code></pre>
+					</section>
+					<section>
 						<h2>Mixins</h2>
 						<pre><code>.bordered {
   border-top: dotted 1px black;
@@ -170,21 +185,6 @@
 					<section>
 						<h2>Guards</h2>
 <pre><code>.mixin (@a) when (@a > 10), (@a &lt; -10) { ... }</code></pre>
-					</section>
-					<section>
-						<h2>Nested rules</h2>
-<pre><code>#header {
-  color: black;
-  .navigation {
-    font-size: 12px;
-  }
-}</code></pre>
-<pre><code>#header {
-  color: black;
-}
-#header .navigation {
-  font-size: 12px;
-}</code></pre>
 					</section>
 					<section>
 <pre><code>.one {

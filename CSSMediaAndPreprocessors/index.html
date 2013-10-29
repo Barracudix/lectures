@@ -168,26 +168,6 @@
 }</code></pre>						
 					</section>
 					<section>
-<pre><code>.mixin (dark; @color) {
-  color: darken(@color, 10%);
-}
-.mixin (light; @color) {
-  color: lighten(@color, 10%);
-}
-.mixin (@_; @color) {
-  display: block;
-}</code></pre>
-<pre><code>@switch: light;
-
-.class {
-  .mixin(@switch; #888);
-}</code></pre>
-<pre><code>.class {
-  color: #a2a2a2;
-  display: block;
-}</code></pre>
-					</section>
-					<section>
 						<h2>Guards</h2>
 <pre><code>.mixin (@a) when (@a > 10), (@a &lt; -10) { ... }</code></pre>
 					</section>

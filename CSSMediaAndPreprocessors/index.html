@@ -53,19 +53,303 @@
     font-size: 13px;
   }
 }</code></pre>
-				<a href="http://www.w3schools.com/css/css_mediatypes.asp">Other Media Types</a>
+					<pre><code><link rel="stylesheet" type="text/css" media="print" href="serif.css"></code></pre>
+				<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media"><small>docs</small></a> | 
+				<a href="http://www.w3.org/TR/css3-mediaqueries/"><small>w3</small></a>
 				</section>
 
 				<section>
 					<h2>Media queries</h2>
+					<pre><code>@media (min-width: 700px) { ... }</code></pre>
+					<p>AND</p>
+					<pre><code>@media (min-width: 700px) and (orientation: landscape)</code></pre>
+					<pre><code>@media tv and (min-width: 700px) and (orientation: landscape) { ... }</code></pre>
+					<p>OR</p>
+					<pre><code>@media (min-width: 700px), (orientation: landscape) { ... }</code></pre>
+					<p>NOT</p>
+					<pre><code>@media not all and (monochrome) { ... } // @media not (all and (monochrome)) { ... }</code></pre>
+					<p>ONLY</p>
+					<pre><code><link rel="stylesheet" media="only screen and (color)" href="example.css" /></code></pre>
+					<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries"><small>docs</small></a>
 				</section>
 
-				<section>
-					<h2>LESS</h2>
-				</section>
+																	<!-- LESS -->
 
 				<section>
-					<h2>SASS</h2>
+					<section>
+						<h2>LESS</h2>
+						<a href="http://lesscss.org/">docs</a> |
+						<a href="http://winless.org/online-less-compiler">online compiler</a>					
+					</section>
+					<section>
+						<h3>Installation</h3>
+						<a href="http://nodejs.org">Install NodeJS</a>
+						<pre><code>npm install -g less</code></pre>
+						<h3>Compilation</h3>
+						<p>Nodejs</p>
+						<pre><code>lessc styles.less</code></pre>
+						<p><a href="http://winless.org/">http://winless.org/</a></p>
+					</section>
+					<section>
+						<h2>Syntax</h2>
+					</section>
+					<section>
+						<h2>Variables</h2>
+						<pre><code>@nice-blue: #5B83AD;
+@light-blue: (@nice-blue + #111);
+#header { color: @light-blue; }</code></pre>
+						<pre><code>#header { color: #6c94be; }</code></pre>
+					</section>
+					<section>
+						<h2>Mixins</h2>
+						<pre><code>.bordered {
+  border-top: dotted 1px black;
+  border-bottom: solid 2px black;
+}
+#menu a {
+  color: #111;
+  .bordered;
+}</code></pre>
+<pre><code>.bordered {
+  border-top: dotted 1px black;
+  border-bottom: solid 2px black;
+}
+#menu a {
+  color: #111;
+  border-top: dotted 1px black;
+  border-bottom: solid 2px black;
+}
+</code></pre>
+					</section>
+					<section>
+						<h2>Mixins with parameters</h2>
+						<pre><code>.border-radius (@radius: 2px) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+#header {
+  .border-radius(4px);
+}
+.button {
+  .border-radius(6px);
+}</code></pre>
+<pre><code>
+#header {
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+.button {
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+}</code></pre>
+					</section>
+					<section>
+<pre><code>.box-shadow (@x: 0; @y: 0; @blur: 1px; @color: #000) {
+  box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  -webkit-box-shadow: @arguments;
+}
+.box-shadow(2px; 5px);</code></pre>
+<pre><code>.mixin (...) {        // matches 0-N arguments
+.mixin () {           // matches exactly 0 arguments
+.mixin (@a: 1) {      // matches 0-1 arguments
+.mixin (@a: 1; ...) { // matches 0-N arguments
+.mixin (@a; ...) {    // matches 1-N arguments</code></pre>
+					</section>
+					<section>
+<pre><code>.mixin (@a) {
+  color: @a;
+}
+.mixin (@a; @b) {
+  color: fade(@a; @b);
+}</code></pre>						
+					</section>
+					<section>
+<pre><code>.mixin (dark; @color) {
+  color: darken(@color, 10%);
+}
+.mixin (light; @color) {
+  color: lighten(@color, 10%);
+}
+.mixin (@_; @color) {
+  display: block;
+}</code></pre>
+<pre><code>@switch: light;
+
+.class {
+  .mixin(@switch; #888);
+}</code></pre>
+<pre><code>.class {
+  color: #a2a2a2;
+  display: block;
+}</code></pre>
+					</section>
+					<section>
+						<h2>Guards</h2>
+<pre><code>.mixin (@a) when (@a > 10), (@a &lt; -10) { ... }</code></pre>
+					</section>
+					<section>
+						<h2>Nested rules</h2>
+<pre><code>#header {
+  color: black;
+  .navigation {
+    font-size: 12px;
+  }
+}</code></pre>
+<pre><code>#header {
+  color: black;
+}
+#header .navigation {
+  font-size: 12px;
+}</code></pre>
+					</section>
+					<section>
+<pre><code>.one {
+    @media (width: 400px) {
+        font-size: 1.2em;
+        @media print and color {
+            color: blue;
+        }
+    }
+}</code></pre>
+<pre><code>@media (width: 400px) {
+  .one {
+    font-size: 1.2em;
+  }
+}
+@media (width: 400px) and print and color {
+  .one {
+    color: blue;
+  }
+}</code></pre>
+					</section>
+					<section>
+						<h2>Interpolation</h2>
+<pre><code>@base-url: "http://assets.fnord.com";
+background-image: url("@{base-url}/images/bg.png");</code></pre>
+<pre><code>@name: blocked;
+.@{name} {
+    color: black;
+}</code></pre>
+<pre><code>// !!! DOESN'T WORK
+$color: "black";
+$theme-@{color}: $color;
+.header {
+  color: $theme-black;
+}</code></pre>
+					</section>
+				</section>
+																	<!-- SASS -->
+				<section>
+					<section>
+						<h2>SASS</h2>
+						<a href="http://sass-lang.com/">docs</a> | 
+						<a href="http://sassmeister.com/">online compiler</a>
+						<p>.sass, scss</p>
+					</section>
+					<section>
+						<h3>Installation</h3>
+						<a href="http://rubyinstaller.org/">Install Ruby</a>
+						<p>Install Sass</p>
+						<pre><code>gem install sass</code></pre>
+						<h3>Compilation</h3>
+						<pre><code>sass input.scss output.css</code></pre>
+						<p><a href="http://mhs.github.io/scout-app/">Scout</a></p>
+					</section>
+					<section>
+						<h2>Variables</h2>
+<pre><code>$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}</code></pre>
+					</section>
+					<section>
+						<h2>Nesting</h2>
+<pre><code>nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}</code></pre>
+					</section>
+					<section>
+						<h2>Importing</h2>
+						<pre><code>@import 'reset';</code></pre>
+					</section>	
+					<section>
+						<h2>Mixins</h2>
+<pre><code>@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+.box { @include border-radius(10px); }</code></pre>
+<pre><code>@mixin dark-theme($text-color) {
+    color: $text-color;
+    background: #000;
+    border: solid 2px #999;
+    @content;
+}
+.header {
+    @include dark-theme(#BADA55) {
+        font-size: 20px;
+    }
+}</code></pre>
+<pre><code>@mixin box-shadow($shadows...) {
+  -moz-box-shadow: $shadows;
+  -webkit-box-shadow: $shadows;
+  box-shadow: $shadows;
+}</code></pre>
+					</section>
+					<section>
+						<h2>Extend/Inheritance</h2>
+<pre><code>.message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+.success {
+  @extend .message;
+  border-color: green;
+}</code></pre>
+					</section>
+					<section>
+						<h2>Placeholders</h2>
+<pre><code>%theme {
+    color: black;
+}
+.header {
+    @extend %theme;
+}</code></pre>
+					</section>
+					<section>
+						<h2>Control Directives</h2>
+<pre><code>$columns: 10;
+p {
+  @if $columns > 3 { border: 2px dotted; }
+}</code></pre>
+<pre><code>@for $i from 1 through 3 {
+  // use $i
+}</code></pre>
+					</section>
+					<section>
+						<h2>Functions</h2>
+<pre><code>$grid-width: 40px;
+$gutter-width: 10px;
+@function grid-width($n) {
+  @return $n * $grid-width + ($n - 1) * $gutter-width;
+}
+#sidebar { width: grid-width(5); }</code></pre>
+					</section>
 				</section>
 
 			</div>

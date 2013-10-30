@@ -20,4 +20,4 @@ Front-end crash course | Fall 2013 | Varna Lab
 Изнесена на 2013-10-29.
 
  - Лектор: [Красимир Цонев](http://krasimirtsonev.com/main/)
- - Видео: ... (password: varnalab)
+ - Видео: [https://vimeo.com/78117048](https://vimeo.com/78117048) (password: varnalab)
